@@ -41,7 +41,7 @@ publishArtifact in Test := false
 pomIncludeRepository := { _ => false }
 
 pomExtra := (
-        <url>https://github.com/$github_id$/$name;format="norm"$</url>
+        <url>$project_url$</url>
         <licenses>
             <license>
               <name>Apache 2.0 License</name>
@@ -56,8 +56,8 @@ pomExtra := (
          <developers>
             <developer>
               <id>$github_id$</id>
-              <name>$your_name$</name>
-              <url>https://github.com/$github_id$</url>
+              <name>$developer_name$</name>
+              <url>$developer_url$</url>
             </developer>
          </developers>
  )
