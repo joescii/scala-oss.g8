@@ -26,6 +26,7 @@ scalacOptions <<= scalaVersion map { v: String =>
   else opts ++ ("-feature" :: "-language:postfixOps" :: "-language:implicitConversions" :: Nil)
 }
 
+// Publishing stuff for sonatype
 publishTo <<= version { _.endsWith("SNAPSHOT") match {
     case true  => Some("snapshots" at "https://oss.sonatype.org/content/repositories/snapshots")
     case false => Some("releases" at "https://oss.sonatype.org/service/local/staging/deploy/maven2")
@@ -62,4 +63,16 @@ pomExtra := (
          </developers>
  )
 
- 
+// OSGi Bundle stuff
+osgiSettings
+
+OsgiKeys.bundleSymbolicName := "$package$"
+
+OsgiKeys.exportPackage := Seq("$package$")
+
+OsgiKeys.importPackage := Seq()
+
+OsgiKeys.privatePackage := Seq()
+
+OsgiKeys.bundleActivator := None
+
