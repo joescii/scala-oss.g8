@@ -70,8 +70,6 @@ OsgiKeys.bundleSymbolicName := "$package$"
 
 OsgiKeys.exportPackage := Seq("$package$")
 
-OsgiKeys.importPackage := Seq()
-
 OsgiKeys.privatePackage := Seq()
 
 OsgiKeys.bundleActivator := None
