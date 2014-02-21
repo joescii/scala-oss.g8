@@ -1,7 +1,6 @@
 # $name$
 
-Problem Statement
-=================
+# Problem Statement
 
 This little project aims to solve the following problems:
 
@@ -28,6 +27,7 @@ libraryDependencies ++= Seq(
 ## Scala Versions
 
 This project is compiled, tested, and published for the following Scala versions:
+
 1. 2.9.1
 2. 2.9.1-1
 3. 2.9.2
@@ -51,7 +51,7 @@ case object MyObject {
 }
 ```
 
-# Wishlist
+## Wishlist
 
 Below is a list of features we would like to one day include in this project
 
