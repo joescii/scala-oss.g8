@@ -1,6 +1,6 @@
 # $name$
 
-# Problem Statement
+## Problem Statement
 
 This little project aims to solve the following problems:
 
