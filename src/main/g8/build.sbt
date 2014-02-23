@@ -74,3 +74,14 @@ OsgiKeys.privatePackage := Seq()
 
 OsgiKeys.bundleActivator := None
 
+// Scala bundle versions require special handling becuase of binary compatibility issues.
+// This is a bit tricky because the published jars are versioned with more than just the Scala version.
+// For example, 2.10.1 is versioned as 2.10.1.v20130302-092018-VFINAL-33e32179fd
+OsgiKeys.requireBundle <<= (scalaVersion, crossScalaVersions) { (ver, crossVers) => 
+  val nextVer = crossVers.zip(crossVers.tail).find(_._1 == ver).map(_._2)
+  val langBundleVer = 
+    if(ver.startsWith("2.10")) "[2.10,2.11)"          // All 2.10.x versions are binary-compatible
+    else if(ver.startsWith("2.9.3")) "[2.9.3,2.9.4)"  // Special case for the last 2.9.x version at this time
+    else "["+ver+","+nextVer.get+")"                  // The current version, up to but excluding the next version
+  Seq("scala-library;bundle-version=\""+langBundleVer+"\"") 
+}
