@@ -85,3 +85,10 @@ OsgiKeys.requireBundle <<= (scalaVersion, crossScalaVersions) { (ver, crossVers)
     else "["+ver+","+nextVer.get+")"                  // The current version, up to but excluding the next version
   Seq("scala-library;bundle-version=\""+langBundleVer+"\"") 
 }
+
+// Scaladoc publishing stuff
+site.settings
+
+ghpages.settings
+
+git.remoteRepo := "git@github.com:$github_id$/$name;format="norm"$.git"
