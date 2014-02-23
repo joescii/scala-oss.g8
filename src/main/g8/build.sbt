@@ -92,3 +92,5 @@ site.settings
 ghpages.settings
 
 git.remoteRepo := "git@github.com:$github_id$/$name;format="norm"$.git"
+
+site.includeScaladoc()
