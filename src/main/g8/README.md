@@ -39,6 +39,10 @@ This project is compiled, tested, and published for the following Scala versions
 
 To use **$name$**, you should import it and call it...
 
+## Scaladoc API
+
+The Scaladoc API for this project can be found [here](http://$github_id$.github.io/$name;format="norm"$/latest/api).
+
 ## Examples
 
 ```scala
