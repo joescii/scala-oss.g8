@@ -1,6 +1,6 @@
 # scala-oss.g8
 
-[g8](https://github.com/n8han/giter8) template for creating an open-source Scala project.  Running g8 against this project will generate a skeleton Scala project suitable for open source.  See this [tutorial](http://proseand.co.nz) for more details.
+[g8](https://github.com/n8han/giter8) template for creating an open-source Scala project.  Running g8 against this project will generate a skeleton Scala project suitable for open source.  See this [tutorial](http://proseand.co.nz/2014/02/24/oss-scala-starter-kit/) for more details.
 
 ## Generating project
 
