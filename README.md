@@ -11,7 +11,7 @@ Install SBT 0.13 - See [setup](http://www.scala-sbt.org/release/docs/Getting-Sta
 In a shell/console, run the following in the parent directory of the new project:
 
 ```
-g8 barnesjd/scala-oss
+g8 joescii/scala-oss
 ```
 
 You will be prompted for the following values.  Defaults are in `[brackets]`.  Descriptions appear after `#` comments:
