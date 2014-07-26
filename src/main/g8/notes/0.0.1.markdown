@@ -1,0 +1,5 @@
+#$name;format="word"$ 0.0.1 
+
+#scala
+
+Initial release of $name$
