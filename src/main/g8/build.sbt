@@ -44,13 +44,6 @@ publishArtifact in Test := false
 pomIncludeRepository := { _ => false }
 
 pomExtra := (
-        <licenses>
-            <license>
-              <name>Apache 2.0 License</name>
-              <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
-              <distribution>repo</distribution>
-            </license>
-         </licenses>
          <scm>
             <url>git@github.com:$github_id$/$name;format="norm"$.git</url>
             <connection>scm:git:git@github.com:$github_id$/$name;format="norm"$.git</connection>
