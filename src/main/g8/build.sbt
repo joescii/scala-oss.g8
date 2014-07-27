@@ -2,6 +2,8 @@ name := "$name$"
 
 organization := "$organization;format="lower"$"
 
+homepage := Some(url("$project_url$"))
+
 version := "0.0.1-SNAPSHOT"
 
 scalaVersion := "2.9.1"
@@ -42,7 +44,6 @@ publishArtifact in Test := false
 pomIncludeRepository := { _ => false }
 
 pomExtra := (
-        <url>$project_url$</url>
         <licenses>
             <license>
               <name>Apache 2.0 License</name>
@@ -62,6 +63,8 @@ pomExtra := (
             </developer>
          </developers>
  )
+ 
+licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0.html"))
 
 // OSGi Bundle stuff
 osgiSettings
@@ -94,3 +97,16 @@ ghpages.settings
 git.remoteRepo := "git@github.com:$github_id$/$name;format="norm"$.git"
 
 site.includeScaladoc()
+
+// Stuff for publicizing on http://ls.implicit.ly
+seq(lsSettings :_*)
+
+(LsKeys.tags in LsKeys.lsync) := Seq("awesome")
+
+(description in LsKeys.lsync) := "$name$ is the most awesome scala project available today"
+
+(LsKeys.ghUser in LsKeys.lsync) := Some("$github_id$")
+
+(LsKeys.ghRepo in LsKeys.lsync) := Some("$name;format="norm"$")
+
+(LsKeys.ghBranch in LsKeys.lsync) := Some("master")
